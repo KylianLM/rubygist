@@ -13,8 +13,7 @@ class GistController < ApplicationController
   end
 
   def test
-    uri = URI('https://api.github.com/gists/47601c9bd553750e0dce')
-    res = Net::HTTP.get(uri)
-    puts res
+    uri = URI('https://api.github.com/gists/dcded648c97be05de643')
+    @res = JSON.parse Net::HTTP.get(uri)
   end
 end
