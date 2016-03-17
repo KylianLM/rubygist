@@ -1,6 +1,8 @@
 class GistController < ApplicationController
   require 'net/http'
+
   def home
+    @gists = Gist.all
   end
 
   def index
@@ -8,7 +10,9 @@ class GistController < ApplicationController
   end
 
   def create
-    Gist.create id_gist: params[:id_gist], url: "https://api.github.com/gists/" + params[:id_gist]
+    Gist.create id_gist: params[:id_gist],
+                url: "https://gist.github.com/" + params[:id_gist],
+                name: params[:name]
     redirect_to "/gist"
   end
 

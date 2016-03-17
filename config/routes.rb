@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'gist#test'
+  root 'gist#home'
   get 'gist' => 'gist#home'
   get 'gist/add' => 'gist#index'
   post 'gist/add' => 'gist#create'

@@ -1,7 +1,10 @@
-<%= form_tag "/gist/add", method: "post" do %>
+<div class="large-4 large-offset-4">
+  <%= form_tag "/gist/add", method: "post" do %>
+      <label for="name">Nom du gist :</label>
+      <input type="text" name="name" id="name" placeholder="ex. Index.php">
+      <label for="id_gist">Id du gist :</label>
+      <input type="text" name="id_gist" id="id_gist" placeholder="ex.">
 
-    <label for="id_gist">Id du gist :</label>
-    <input type="text" name="id_gist" id="id_gist">
-
-    <input type="submit">
-<% end %>
+      <input type="submit" class="button">
+  <% end %>
+</div>
