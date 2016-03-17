@@ -1,1 +1,24 @@
 <h1>Liste Gist</h1>
+<a href="/gist/add" class="button">Ajouter</a>
+<table class="large-6 large-offset-3">
+  <thead>
+  <tr>
+    <th>Nom</th>
+    <th>Catégories</th>
+    <th width="200">Lien</th>
+  </tr>
+  </thead>
+  <% @gists.each do | gist | %>
+      <tr>
+        <td>
+          <%= gist.name %>
+        </td>
+        <td>
+          <span class="label"><%= gist.category.name %></span>
+        </td>
+        <td>
+          <a href="<%=gist.url %>" target="_blank">Afficher</a>
+        </td>
+      </tr>
+  <% end %>
+</table>
