@@ -1,9 +1,14 @@
+<div class="large-offset-4">
+  <a href="/" class="button">Home</a>
+  <a href="/logout" class="alert button">Deconnexion</a>
+</div>
 <div class="large-4 large-offset-4">
   <%= form_tag "/gist/add", method: "post" do %>
       <label for="name">Nom du gist :</label>
       <input type="text" name="name" id="name" placeholder="ex. Index.php">
       <label for="id_gist">Id du gist :</label>
-      <input type="text" name="id_gist" id="id_gist" placeholder="ex. 47601c9bd553750e0dce">
+      <h5><small>https://gist.github.com/username/<span style="color: #5f5f5fg">6b99b9cceba1082f8b18</span></small></h5>
+      <input type="text" name="id_gist" id="id_gist" placeholder="ex. 6b99b9cceba1082f8b18">
       <div class="row">
         <div class="small-3 columns">
           <label for="category" class="text-right middle">Categories :</label>
