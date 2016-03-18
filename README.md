@@ -1,12 +1,8 @@
-# rubygist
-Technical test for BrANDCelebrities
 Rubygist
 ===================
 
-
 Project for **[BrANDCelebrities](http://brandandcelebrities.com/)**
 
-----------
 What is Rubygist
 -------------
 
