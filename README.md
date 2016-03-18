@@ -6,7 +6,7 @@ Project for **[BrANDCelebrities](http://brandandcelebrities.com/)**
 What is Rubygist
 -------------
 
-Rubygist is an application in you ruby, you can to save and classified gists as you want.
+Rubygist is an application in ruby, you can to save and classified gists as you want.
 
 How to install
 -------------
