@@ -3,10 +3,16 @@ class GistController < ApplicationController
 
   def home
     @gists = Gist.all
+    @categories = Category.all
+  end
+
+  def category
+    @categories = Category.all
+    @gists = Category.find(params[:category]).gists
+    render :template => "gist/home.html.erb"
   end
 
   def index
-
   end
 
   def create
@@ -16,6 +22,7 @@ class GistController < ApplicationController
     redirect_to "/gist"
   end
 
+  #Action for testing API Gist
   def test
     uri = URI('https://api.github.com/gists/dcded648c97be05de643')
     @res = JSON.parse Net::HTTP.get(uri)
