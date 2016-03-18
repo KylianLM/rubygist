@@ -1,33 +1,29 @@
 <div class="large-offset-3">
   <h1>Liste Gist</h1>
-<a href="/gist/add" class="button">Ajouter</a>
+  <a href="/gist/add" class="button">Ajouter</a>
   <a href="/logout" class="alert button">Deconnexion</a>
 </div>
-<div class="large-offset-3">
-  <div class="row">
-    <div class="large-6">
-      <%= form_tag "/gist", method: "post" do %>
-          <div class="row">
-            <div class="small-3 columns">
-              <label for="category" class="text-right middle">Categories :</label>
-            </div>
-            <div class="small-5">
-              <select name="category" id="category">
-                <% @categories.each do |category| %>
-                    <option value="<%= category.id%>"><%= category.name %></option>
-                <% end %>
-              </select>
-            </div>
-            <div class="small-3" style="margin-left: 20px">
-              <input class="button success" type="submit">
-            </div>
-          </div>
-      <% end %>
-    </div>
-    <div class="large-3">
-      <a href="/"><button class="alert button">Reset</button></a>
-    </div>
-  </div>
+<div class="row large-offset-6">
+  <%= form_tag "/gist", method: "post" do %>
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="category" class="text-right middle">Categories :</label>
+        </div>
+        <div class="small-5">
+          <select name="category" id="category">
+            <% @categories.each do |category| %>
+                <option value="<%= category.id%>"><%= category.name %></option>
+            <% end %>
+          </select>
+        </div>
+        <div class="small-3">
+          <input class="button success" type="submit">
+          <a href="/"><button class="alert button">Reset</button></a>
+        </div>
+      </div>
+  <% end %>
+</diV>
+
 </div>
 <table class="large-6 large-offset-3">
   <thead>
