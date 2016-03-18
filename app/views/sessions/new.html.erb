@@ -1,0 +1,13 @@
+<div class="large-6 large-offset-3">
+  <h1>Connexion</h1>
+
+  <%= form_tag '/login' do %>
+      <label for="email">Email: </label>
+      <input type="email" name="email" id="email">
+      <label for="password">Mot de passe:</label>
+      <input type="password" name="password" id="password">
+      <input class="button success" type="submit">
+      <a href="/signup"><button class="button">Inscription</button></a>
+  <% end %>
+
+</div>

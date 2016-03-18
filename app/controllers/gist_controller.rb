@@ -1,14 +1,15 @@
 class GistController < ApplicationController
   require 'net/http'
+  before_filter :authorize
 
   def home
-    @gists = Gist.all
+    @gists = User.find(current_user.id).gist
     @categories = Category.all
   end
 
   def category
     @categories = Category.all
-    @gists = Category.find(params[:category]).gists
+    @gists = Gist.where('user_id = ? AND category_id = ?', current_user.id, params[:category])
     render :template => "gist/home.html.erb"
   end
 
@@ -20,7 +21,8 @@ class GistController < ApplicationController
     Gist.create id_gist: params[:id_gist],
                 url: "https://gist.github.com/" + params[:id_gist],
                 name: params[:name],
-                category_id: params[:category]
+                category_id: params[:category],
+                user_id: current_user.id
     redirect_to "/gist"
   end
 
