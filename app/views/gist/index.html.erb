@@ -4,6 +4,18 @@
       <input type="text" name="name" id="name" placeholder="ex. Index.php">
       <label for="id_gist">Id du gist :</label>
       <input type="text" name="id_gist" id="id_gist" placeholder="ex.">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="category" class="text-right middle">Categories :</label>
+        </div>
+        <div class="small-5">
+          <select name="category" id="category">
+            <% @categories.each do |category| %>
+                <option value="<%= category.id%>"><%= category.name %></option>
+            <% end %>
+          </select>
+        </div>
+      </div>
 
       <input type="submit" class="button">
   <% end %>

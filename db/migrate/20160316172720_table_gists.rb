@@ -4,5 +4,6 @@ class TableGists < ActiveRecord::Migration
     create_table :gists
     add_column :gists, :id_gist ,:string
     add_column :gists, :url , :string
+    add_column :gists, :name, :string
   end
 end
