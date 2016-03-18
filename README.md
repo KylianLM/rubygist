@@ -23,7 +23,7 @@ then you need to change 'config/database.yml' with your own settings, for exampl
  - port: 3306
 
 
-After, you need to create databases project.
+After, you need to create project's databases.
 
     $ rake db:create
     $ rake db:migrate
