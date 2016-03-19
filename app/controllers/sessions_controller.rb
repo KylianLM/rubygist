@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   def new
   end
 
+  #Créer une session
   def create
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
@@ -12,6 +13,7 @@ class SessionsController < ApplicationController
     end
   end
 
+  #Detruit la session
   def destroy
     session[:user_id] = nil
     redirect_to '/login'
